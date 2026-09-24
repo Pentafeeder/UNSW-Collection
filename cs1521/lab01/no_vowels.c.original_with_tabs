@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int main(void) {
+	char letter;
+	int valid = scanf("%c", &letter);
+	while (valid == 1) {
+		char capital_check = letter;
+		if (letter < 'a') {
+			capital_check = letter + 32;
+		}
+		
+		if (capital_check != 'a' && capital_check != 'e' && capital_check != 'i'
+		 		&& capital_check != 'o' && capital_check != 'u') {
+			printf("%c", letter);
+		}
+
+		valid = scanf("%c", &letter);
+	}
+	
+	return 0;
+}
